@@ -11,3 +11,4 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    return [num for idx, num in enumerate(nums) if nums.count(num) > nums.count(nums[idx-1])][0]
