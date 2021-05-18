@@ -28,4 +28,17 @@ def is_odd_string(word):
         True
     """
 
+    word = word.lower()
+    num_list = list(range(1, 27))
+    split_alphabet = list("abcdefghijklmnopqrstuvwxyz")
+
+    zipped_alphabet_dict = dict(list(zip(split_alphabet, num_list)))
+
+    count =  0
+    for letter in word:
+        count += zipped_alphabet_dict[letter]
+
+    return True if count%2==1 else False
+
+
     # Hint: you may find the ord() function useful here
